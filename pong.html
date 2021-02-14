@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+        </style>
+        <script src="./dist/pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong</h1>
+        <svg id="canvas" width="600" height="600">
+            <g id="Player">
+                <rect width="10" height="70" id="playerPaddle" transform="translate(590,280)"></rect>
+                <text id="playerScore" transform="translate(425,100)" class="score">0</text>
+            </g>
+            <g id="Computer">
+                <rect id="computerPaddle" transform="translate(0,280)" width="10" height="70"></rect>
+                <text id="computerScore" transform="translate(125,100)" class="score">0</text>
+            </g>
+            <line id="middleLine" transform="translate(297.5, 0)" stroke="white" stroke-dasharray="5,5" x1="0" y1="0" x2="0" y2="600"></line>
+            <g id="Ball">
+                <circle id="ball" transform="translate(297.5, 297.5)" r="5" style="fill:white"></circle>
+            </g>
+            <g id="powerUps"></g>
+        </svg>
+        <div id="powerups">
+            <h2>PowerUp Types:</h2>
+            <p>Powerups only affect the ball</p>
+            <p><div style="background-color:green;" class="colourSymbol"></div><span> Increases speed by 25%</span></p>
+            <p><div style="background-color:red;" class="colourSymbol"></div><span> Decreases speed by 25%</span></p>
+            <p><div style="background-color:white;" class="colourSymbol"></div><span> Increases size by 25%</span></p>
+            <p><div style="background-color:grey;" class="colourSymbol"></div><span> Decreases size by 25%</span></p>
+            <h2>Active PowerUps:</h2>
+            <span id="activePowerups"></span>
+        </div>
+        <div id="controls">
+            <h2>Controls:</h2>
+            <p>The game can be controlled by mouse when mouse is over the canvas, or by the keyboard when it is outside the canvas</p>
+            <table>
+                <tr><td>Move Up</td><td><div id="ArrowUp" class="key">&#8679;</div></td></tr>
+                <tr><td>Move Down</td><td><div id="ArrowDown" class="key">&#8681;</div></td></tr>
+                <tr><td>Pause Game</td><td><button id="Escape" class="key" style="width:40px">esc</button></td></tr>
+                <tr><td>Restart Game</td><td><button id="KeyR" class="key">r</button></td></tr>
+            </table>
+        </div>
+        <div id="colourPalette">
+            <h2>Current Colour Palette</h2>
+            <p>Colour Palette Name: <span id="colourPaletteName"></span></p>
+            <p>Background-color: <div id="colourPaletteBg" class="colourSymbol"></div> <span id="colourPaletteBgName"></span></p>
+            <p>Player color: <div id="colourPalettePlayer" class="colourSymbol"></div> <span id="colourPalettePlayerName"></span></p>
+            <p>Computer color: <div id="colourPaletteComputer" class="colourSymbol"></div> <span id="colourPaletteComputerName"></span></p>
+            <p>Ball color: <div id="colourPaletteBall" class="colourSymbol"></div> <span id="colourPaletteBallName"></span></p>
+        </div>
+    </body>
+</html>

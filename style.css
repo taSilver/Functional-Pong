@@ -1,0 +1,39 @@
+BODY, H2, H3, H4, H5, H6, TH, TD {
+font-family: arial, helvetica, sans-serif;
+}
+H1 {
+    font-size: 38px;
+    font-family: arial, helvetica, sans-serif;
+}
+#gameOver{
+    font-size: 80px;
+    font-family: arial, helvetica, sans-serif;
+    fill: red;
+}
+
+.key {
+    width:18px;
+    text-align:center;
+    border-radius:3px;
+    background-color:lightgray;
+}
+
+.highlight {
+background-color:pink;
+}
+div#controls, div#powerups, div#colourPalette {
+    float: right;
+    margin: 50px;
+    max-width: 250px;
+}
+
+.score {
+    fill:white;font:50px Roboto, sans-serif;
+}
+
+.colourSymbol {
+    width:20px;
+    height:20px;
+    display:inline-block;
+    border: 1px solid black;
+}
